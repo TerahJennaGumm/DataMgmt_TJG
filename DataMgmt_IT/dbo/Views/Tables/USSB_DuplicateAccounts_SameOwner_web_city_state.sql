@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[USSB_DuplicateAccounts_SameOwner_web_city_state] (
+    [Dupe Key]                           NVARCHAR (255) NULL,
+    [Id]                                 NVARCHAR (255) NULL,
+    [Id Comma]                           NVARCHAR (255) NULL,
+    [Duplicate Yes/No?]                  NVARCHAR (255) NULL,
+    [Master/Non Master]                  NVARCHAR (255) NULL,
+    [Notes]                              NVARCHAR (255) NULL,
+    [Account Name]                       NVARCHAR (255) NULL,
+    [DandbCompany Primary Business Name] NVARCHAR (255) NULL,
+    [Owner Full Name]                    NVARCHAR (255) NULL,
+    [Account Type]                       NVARCHAR (255) NULL,
+    [Account Site]                       NVARCHAR (255) NULL,
+    [Created Date]                       DATETIME       NULL,
+    [D&B Employees Worldwide]            FLOAT (53)     NULL,
+    [# Opportunities]                    FLOAT (53)     NULL,
+    [# Opportunities Open]               FLOAT (53)     NULL,
+    [Acct Owner Business Unit]           NVARCHAR (255) NULL,
+    [Acct Owner Division]                NVARCHAR (255) NULL,
+    [Billing St]                         NVARCHAR (255) NULL,
+    [Billing City]                       NVARCHAR (255) NULL,
+    [Billing State/Province]             NVARCHAR (255) NULL,
+    [Website]                            NVARCHAR (255) NULL,
+    [SAP Data Verified Date]             DATETIME       NULL,
+    [SAP Account ID]                     FLOAT (53)     NULL,
+    [SAP Planning Entity Account ID]     FLOAT (53)     NULL
+);
+

@@ -1,0 +1,2 @@
+﻿CREATE USER [CONCUR\DataMgmt] FOR LOGIN [CONCUR\DataMgmt];
+

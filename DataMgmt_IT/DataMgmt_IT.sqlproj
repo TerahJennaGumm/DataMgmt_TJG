@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DataMgmt_IT</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{ebf246d4-e9b6-4ac9-9a41-a886178238f3}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DataMgmt_IT</RootNamespace>
+    <AssemblyName>DataMgmt_IT</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\Views\Outtask mapping" />
+    <Folder Include="dbo\Views\SFDC field analysis" />
+    <Folder Include="dbo\Views\SFDC accounts data quality" />
+    <Folder Include="dbo\Views\SFDC Address data quality" />
+    <Folder Include="dbo\Views\Business Partner Mapping" />
+    <Folder Include="dbo\Views\Concur Customers" />
+    <Folder Include="dbo\Views\Metranet views" />
+    <Folder Include="dbo\Views\Misc" />
+    <Folder Include="dbo\Views\Psssible data corrections" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\mde_ml_account_stats_4.sql" />
+    <Build Include="dbo\Tables\account_stats_normalized_2.sql" />
+    <Build Include="dbo\Tables\Attributes_2.sql" />
+    <Build Include="dbo\Tables\BIEDW_Outtask_Sample_2.sql" />
+    <Build Include="dbo\Tables\company_list_2018_03_09_2.sql" />
+    <Build Include="dbo\Tables\AP_PRODUCT_MAP_2.sql" />
+    <Build Include="dbo\Tables\Conversations_SAPConcur_2Year_2.sql" />
+    <Build Include="dbo\Tables\CRS_GOV_TYPE_2.sql" />
+    <Build Include="dbo\Tables\CRS_GOVERNMENT_2.sql" />
+    <Build Include="dbo\Tables\CRS_I4P_PRODUCTS_2.sql" />
+    <Build Include="dbo\Tables\CRS_PRODUCT_MAP_2.sql" />
+    <Build Include="dbo\Tables\AllSFDCCountryPicklistValues_2.sql" />
+    <Build Include="dbo\Tables\UpdatedcountryCodeMapping_2.sql" />
+    <Build Include="dbo\Tables\mde_ml_account_stats_1_2.sql" />
+    <Build Include="dbo\Tables\I4P_COMPANYCODE_MAP_2.sql" />
+    <Build Include="dbo\Tables\mde_ml_account_stats_2_2.sql" />
+    <Build Include="dbo\Tables\FIN_COMPANYCODE_ORACLE_MAP_2.sql" />
+    <Build Include="dbo\Tables\countryCodeMapping_2.sql" />
+    <Build Include="dbo\Tables\Outtask_Company_List_SA_2.sql" />
+    <Build Include="dbo\Functions\sfdc_fn_Calc18CharId_2.sql" />
+    <Build Include="dbo\Functions\udf_get_attributes_2.sql" />
+    <Build Include="dbo\Stored Procedures\usp_normalize_account_stats_2.sql" />
+    <Build Include="dbo\Views\SFDC field analysis\AccountID_NAME_TYPE_BillingSite_2.sql" />
+    <Build Include="dbo\Views\SFDC field analysis\AccountID_NAME_TYPE_BillingSite_Upper18Digit_2.sql" />
+    <Build Include="dbo\Views\SFDC accounts data quality\View_SFDC_AccountsWithSameContactEmailsLinked_1.sql" />
+    <Build Include="dbo\Views\SFDC accounts data quality\View_SFDC_AccountsWithSameWebsite_perOwner_1.sql" />
+    <Build Include="dbo\Views\SFDC accounts data quality\View_SFDC_ContactsWithSameEmail_1.sql" />
+    <Build Include="dbo\Views\SFDC Address data quality\View_SFDCCountries_Actual_Picklist_2.sql" />
+    <Build Include="dbo\Views\SFDC Address data quality\View_SFDCCountries_Actual_SAPMapping_2.sql" />
+    <Build Include="dbo\Views\SFDC Address data quality\View_SFDCCountries_Picklist_SAPMapping_2.sql" />
+    <Build Include="dbo\Views\SFDC field analysis\View_SFDC_Address_Fields_2.sql" />
+    <Build Include="dbo\Views\Concur Customers\View_SFDC_Concur_GDSX_Customers_1.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\Concur Customers\vw_Active_INDIRECT_Customers_Metranet_1.sql" />
+    <Build Include="dbo\Views\Concur Customers\vw_Active_INDIRECT_Customers_Opportunity_1.sql" />
+    <Build Include="dbo\Views\Concur Customers\vw_Active_INDIRECT_Customers_SFDCAccount_1.sql" />
+    <Build Include="dbo\Views\Concur Customers\vw_Active_MNSubs_Assets_OpptyLIne_PILevel_1.sql" />
+    <Build Include="dbo\Views\Concur Customers\vw_Assets_Oppty_Line_1.sql" />
+    <Build Include="dbo\Views\Concur Customers\vw_Metranet_BusinessCustomer_Status_2.sql" />
+    <Build Include="dbo\Views\Concur Customers\vw_Metranet_PrimaryBusinessCustomer_Status_2.sql" />
+    <Build Include="dbo\Views\Concur Customers\vw_MN_ActiveSubscription_1.sql" />
+    <Build Include="dbo\Views\Concur Customers\vw_MN_CustAccount_1.sql" />
+    <Build Include="dbo\Views\Concur Customers\vw_MN_Subscription_ActiveAsset_2.sql" />
+    <Build Include="dbo\Views\Outtask mapping\vw_Outtask_Account_Match_SAs_Oppo_1.sql" />
+    <Build Include="dbo\Views\Outtask mapping\vw_Outtask_Account_MatchAll_And_SAs_join_1.sql" />
+    <Build Include="dbo\Views\Outtask mapping\vw_Outtask_Account_MatchAll_And_SAs_SFDCjoin_1.sql" />
+    <Build Include="dbo\Views\Outtask mapping\vw_Outtask_Account_MatchAll_MetranetActiveCust_NEW_1.sql" />
+    <Build Include="dbo\Views\Outtask mapping\vw_Outtask_Account_MatchAll_MetranetActiveCust_Oppo_1.sql" />
+    <Build Include="dbo\Views\Outtask mapping\vw_Outtask_SAs_ActiveBusinessCustomer_IndirectORTMCAccounts_1.sql" />
+    <Build Include="dbo\Views\Concur Customers\vw_MN_Subscription_ActiveAsset_Oppty_POLevel_1.sql" />
+    <Build Include="dbo\Views\Concur Customers\vw_MN_Subscription_ActiveAsset_v1_1.sql" />
+    <Build Include="dbo\Views\SFDC field analysis\vw_Salesforce_Account_selectFields_1.sql" />
+    <Build Include="dbo\Views\SFDC field analysis\vw_Salesforce_Asset_Accounts_2.sql" />
+    <Build Include="dbo\Views\SFDC Address data quality\vw_Salesforce_Distinct_Countries_Actual_1.sql" />
+    <Build Include="dbo\Views\Concur Customers\vw_SFDC_Active_Direct_Customers_SFDC_1.sql" />
+    <Build Include="dbo\Views\Concur Customers\vw_SFDC_Active_Direct_Indirect_Customers_Metranet_SFDC_Status_1.sql" />
+    <Build Include="dbo\Views\Concur Customers\vw_SFDC_Active_Direct_Indirect_Customers_SFDC_Metranet_Status_1.sql" />
+    <Build Include="dbo\Views\SFDC accounts data quality\vw_SFDC_SAMEAcctName_SAMEOWNER_SMB_NoSAPData_1.sql" />
+    <Build Include="dbo\Views\SFDC accounts data quality\vw_SFDC_SAMEDunsNumber_SAMEOWNER_SMB_NoSAPData_1.sql" />
+    <Build Include="dbo\Views\SFDC accounts data quality\vw_SFDC_SAMEWEBSITE_SAMEOWNER_SMB_NoSAPData_1.sql" />
+    <Build Include="dbo\Views\SFDC accounts data quality\vw_SFDC_SFDCId_SAMEGlobalDUNS_SameOWNER_SMB_NoSAPData_1.sql" />
+    <Build Include="dbo\Views\Metranet views\vw_Subscription_SubProperties_1.sql" />
+    <Build Include="dbo\Views\Metranet views\vw_SubscriptionOpportunityID_1.sql" />
+    <Build Include="dbo\Views\SFDC field analysis\SFDCAccount_MDG_CRM_fields_2.sql" />
+    <Build Include="dbo\Views\Misc\vw_CRS_MN_Products_2.sql" />
+    <Build Include="dbo\Views\Misc\vw_FDS_699_BPSExport_1.sql" />
+    <Build Include="dbo\Tables\OuttaskMatching_contract_external_reference_1.sql" />
+    <Build Include="dbo\Views\Outtask mapping\vw_Outtask_Companyname_match_SFDC.sql" />
+    <Build Include="dbo\Tables\Table_Outtask_Companyname_match_SFDC.sql" />
+    <Build Include="dbo\Views\Outtask mapping\vw_table_Outtask_Companyname_match_SFDC_MN.sql" />
+    <Build Include="dbo\Views\Concur Customers\vw_Metranet_DIRECT_Active_BusCu_Ids_BasedonCOID.sql" />
+    <Build Include="dbo\Views\Psssible data corrections\vw_Outtask_SFDC_MN_Indirects_TCandSFDCId_correction.sql" />
+    <Build Include="dbo\Views\Concur Customers\vw_Metranet_Active_TMCs.sql" />
+    <Build Include="dbo\Views\SFDC field analysis\vw_SFDCAccount_Oppo_MDG_CRM_fields.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataMgmt_Metranet\DataMgmt_Metranet.sqlproj">
+      <Name>DataMgmt_Metranet</Name>
+      <Project>{4ad4f8e7-58ed-42e7-a1bb-6d91330333de}</Project>
+      <Private>True</Private>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>DataMgmt_Metranet</DatabaseSqlCmdVariable>
+    </ProjectReference>
+    <ProjectReference Include="..\DataMgmt_SFDC\DataMgmt_SFDC.sqlproj">
+      <Name>DataMgmt_SFDC</Name>
+      <Project>{634c052a-6b40-4e9f-8e09-e48047232b44}</Project>
+      <Private>True</Private>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>DataMgmt_SFDC</DatabaseSqlCmdVariable>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="DataMgmt_Metranet">
+      <DefaultValue>DataMgmt_Metranet</DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="DataMgmt_SFDC">
+      <DefaultValue>DataMgmt_SFDC</DefaultValue>
+      <Value>$(SqlCmdVar__2)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [CONCUR\SantanuD]
+    AUTHORIZATION [CONCUR\SantanuD];
+

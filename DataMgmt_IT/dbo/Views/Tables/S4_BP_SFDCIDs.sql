@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[S4_BP_SFDCIDs] (
+    [RULE_NAMES]        VARCHAR (50) NULL,
+    [GROUP_ID_0]        VARCHAR (50) NULL,
+    [BUSINESS_PART_NUM] VARCHAR (50) NULL,
+    [IDENT_TYPE]        VARCHAR (50) NULL,
+    [IDENT_NUM]         VARCHAR (50) NULL
+);
+

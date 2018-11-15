@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Contact_BBA7C299-D67C-4787-9243-3E3679EBC95E] (
+    [rng_start] DATETIME NOT NULL,
+    [rng_end]   DATETIME NOT NULL,
+    PRIMARY KEY CLUSTERED ([rng_start] ASC)
+);
+

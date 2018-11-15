@@ -1,0 +1,3 @@
+﻿CREATE USER [CONCUR\SantanuD] FOR LOGIN [CONCUR\SantanuD]
+    WITH DEFAULT_SCHEMA = [CONCUR\SantanuD];
+

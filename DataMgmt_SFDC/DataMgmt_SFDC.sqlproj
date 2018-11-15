@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DataMgmt_SFDC</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{634c052a-6b40-4e9f-8e09-e48047232b44}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DataMgmt_SFDC</RootNamespace>
+    <AssemblyName>DataMgmt_SFDC</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Partner_Accounts__c.sql" />
+    <Build Include="dbo\Tables\Campaign.sql" />
+    <Build Include="dbo\Tables\CampaignMember.sql" />
+    <Build Include="dbo\Tables\ActivityHistory.sql" />
+    <Build Include="dbo\Tables\Asset.sql" />
+    <Build Include="dbo\Tables\TableRefreshTime.sql" />
+    <Build Include="dbo\Tables\BigMachines__Quote__c.sql" />
+    <Build Include="dbo\Tables\BigMachines__Quote_Product__c.sql" />
+    <Build Include="dbo\Tables\Lead.sql" />
+    <Build Include="dbo\Tables\Client_Disconnect__c.sql" />
+    <Build Include="dbo\Tables\Competitor__c.sql" />
+    <Build Include="dbo\Tables\Status_Next_Step__c.sql" />
+    <Build Include="dbo\Tables\Credit_Memo__c.sql" />
+    <Build Include="dbo\Tables\Credit_Memo_Quota__c.sql" />
+    <Build Include="dbo\Tables\Contact.sql" />
+    <Build Include="dbo\Tables\CurrencyType.sql" />
+    <Build Include="dbo\Tables\DandBCompany.sql" />
+    <Build Include="dbo\Tables\Escalation__c.sql" />
+    <Build Include="dbo\Tables\Group.sql" />
+    <Build Include="dbo\Tables\Invoice__c.sql" />
+    <Build Include="dbo\Tables\Invoice_Details__c.sql" />
+    <Build Include="dbo\Tables\Opportunity.sql" />
+    <Build Include="dbo\Tables\OpportunityLineItem.sql" />
+    <Build Include="dbo\Tables\OpportunitySplit.sql" />
+    <Build Include="dbo\Tables\OpportunityStage.sql" />
+    <Build Include="dbo\Tables\Partner_Customer_Involvement__c.sql" />
+    <Build Include="dbo\Tables\Partner_Enablement__c.sql" />
+    <Build Include="dbo\Tables\Account.sql" />
+    <Build Include="dbo\Tables\Pricebook2.sql" />
+    <Build Include="dbo\Tables\PricebookEntry.sql" />
+    <Build Include="dbo\Tables\Product2.sql" />
+    <Build Include="dbo\Tables\pse__proj__c.sql" />
+    <Build Include="dbo\Tables\RecordType.sql" />
+    <Build Include="dbo\Tables\Sales_To_Service__c.sql" />
+    <Build Include="dbo\Tables\SKU_Template_Mapping__c.sql" />
+    <Build Include="dbo\Tables\user.sql" />
+    <Build Include="dbo\Tables\UserRole.sql" />
+    <Build Include="dbo\Tables\SFDC_SyncSchedule.sql" />
+    <Build Include="dbo\Tables\Contact_6DF2F9A6-EBAC-4FE3-8596-F4766396FC4B.sql" />
+    <Build Include="dbo\Tables\Contact_9C8C43FB-26E5-41B0-87A9-63A48730AA80.sql" />
+    <Build Include="dbo\Tables\Lead_B5CF926F-E8C7-4FC0-9C84-F178B60CA5BE.sql" />
+    <Build Include="dbo\Tables\Contact_BBA7C299-D67C-4787-9243-3E3679EBC95E.sql" />
+    <Build Include="dbo\Tables\Lead_9EF461CB-AF93-42D5-A547-EB73400B385E.sql" />
+    <Build Include="dbo\Tables\sys_sffields.sql" />
+    <Build Include="dbo\Tables\sys_sfobjects.sql" />
+    <Build Include="dbo\Tables\OpportunityContactRole.sql" />
+    <Build Include="dbo\Tables\AccountCleanInfo.sql" />
+    <Build Include="dbo\Functions\SF_Version.sql" />
+    <Build Include="dbo\Functions\SF_Split.sql" />
+    <Build Include="dbo\Stored Procedures\SF_BulkOps.sql" />
+    <Build Include="dbo\Stored Procedures\SF_ColCompare.sql" />
+    <Build Include="dbo\Stored Procedures\SF_CreateKeys.sql" />
+    <Build Include="dbo\Stored Procedures\SF_DropKeys.sql" />
+    <Build Include="dbo\Stored Procedures\SF_Generate.sql" />
+    <Build Include="dbo\Stored Procedures\SF_IsValidSFObject.sql" />
+    <Build Include="dbo\Stored Procedures\SF_Logger.sql" />
+    <Build Include="dbo\Stored Procedures\SF_Metadata.sql" />
+    <Build Include="dbo\Stored Procedures\SF_Refresh.sql" />
+    <Build Include="dbo\Stored Procedures\SF_RefreshAll.sql" />
+    <Build Include="dbo\Stored Procedures\SF_RefreshIAD.sql" />
+    <Build Include="dbo\Stored Procedures\SF_RemoveDeletesIAD.sql" />
+    <Build Include="dbo\Stored Procedures\SF_Replicate.sql" />
+    <Build Include="dbo\Stored Procedures\SF_Replicate3.sql" />
+    <Build Include="dbo\Stored Procedures\SF_ReplicateAll.sql" />
+    <Build Include="dbo\Stored Procedures\SF_ReplicateHistory.sql" />
+    <Build Include="dbo\Stored Procedures\SF_ReplicateIAD.sql" />
+    <Build Include="dbo\Stored Procedures\SF_ReplicateLarge.sql" />
+    <Build Include="dbo\Stored Procedures\SF_UploadFile.sql" />
+    <Build Include="dbo\Stored Procedures\SF_VASQuery.sql" />
+    <Build Include="dbo\Stored Procedures\SFDC_RefreshAllObjectData.sql" />
+    <Build Include="dbo\Stored Procedures\SFDC_RefreshObjectData.sql" />
+    <Build Include="dbo\Stored Procedures\SFDC_RefreshObjectFormulaData.sql" />
+  </ItemGroup>
+</Project>

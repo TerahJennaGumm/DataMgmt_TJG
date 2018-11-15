@@ -1,0 +1,27 @@
+﻿CREATE TABLE [CONCUR\MinalC].[Table_Outtask_NameMatch4_WONOpp_BillingAcct_MatchAllSFDC] (
+    [company_id]                       NVARCHAR (8)   NULL,
+    [MatchAll_SFDCId]                  NCHAR (18)     NULL,
+    [MatchAll_SFDCName]                NVARCHAR (255) NULL,
+    [MatchAll_SFDC_WONOpportunities]   DECIMAL (18)   NULL,
+    [MatchAll_NameMatchValue]          INT            NULL,
+    [MatchAll_FreeTrialEntityID]       NVARCHAR (45)  NULL,
+    [MatchAll_HMCEntityID]             NVARCHAR (80)  NULL,
+    [MatchAll_OuttaskID]               NVARCHAR (8)   NULL,
+    [MatchAll_SFDC_AcctType]           NVARCHAR (40)  NULL,
+    [MatchAll_ActiveMN_Exists]         NVARCHAR (255) NULL,
+    [MatchAll_SFDC_BillingCountry]     NVARCHAR (255) NULL,
+    [MatchAll_SFDC_BillingCity]        NVARCHAR (80)  NULL,
+    [MatchAll_SFDC_DUNS]               VARCHAR (9)    NULL,
+    [MatchAll_SFDC_TotalOpportunities] DECIMAL (18)   NULL,
+    [MatchAll_SFDCsite]                NVARCHAR (80)  NULL,
+    [MatchAll_SFDCWebsite]             NVARCHAR (255) NULL,
+    [MatchAll_SFDCTravel_org]          NVARCHAR (255) NULL,
+    [address]                          NVARCHAR (255) NULL,
+    [city]                             NVARCHAR (255) NULL,
+    [state]                            NVARCHAR (255) NULL,
+    [zip_code]                         NVARCHAR (255) NULL,
+    [salesforce_account_id]            NVARCHAR (255) NULL,
+    [entity_id]                        NVARCHAR (255) NULL,
+    [salesforce_account_18digitid]     NVARCHAR (255) NULL
+);
+
